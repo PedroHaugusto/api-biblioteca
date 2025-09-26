@@ -1,6 +1,7 @@
 package com.projeto.pos.apibiblioteca.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,10 +22,13 @@ public class Livro {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
+    @NotBlank
     private String titulo;
 
+    @Column(length = 255, nullable = false)
     private String descricao;
 
+    @NotBlank
     private Integer qtdePaginas;
 
     @ManyToMany
