@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/livros")
@@ -32,5 +33,16 @@ public class LivroController {
         var livroDtoSaved = livroService.save(livroDto);
         URI uri = uriBuilder.path("/livros/{id}").buildAndExpand(livroDtoSaved.id()).toUri();
         return ResponseEntity.created(uri).body(livroDtoSaved);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<LivroDto> update(@PathVariable("id") UUID id, @Valid @RequestBody LivroDto livroDto){
+        return ResponseEntity.ok(livroService.update(id, livroDto));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteById(@PathVariable UUID id) {
+        livroService.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 }
