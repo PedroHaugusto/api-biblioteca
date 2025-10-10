@@ -1,0 +1,54 @@
+2025-09-27 15:43:49 [http-nio-8080-exec-1] ERROR c.a.p.a.e.GlobalHandlerException - [com.aula.pos.appinscricoes.service.PessoaServiceImpl.lambda$findById$0(PessoaServiceImpl.java:33), java.base/java.util.Optional.orElseThrow(Optional.java:403), com.aula.pos.appinscricoes.service.PessoaServiceImpl.findById(PessoaServiceImpl.java:33), java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104), java.base/java.lang.reflect.Method.invoke(Method.java:565), org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360), org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:724), com.aula.pos.appinscricoes.service.PessoaServiceImpl$$SpringCGLIB$$0.findById(<generated>), com.aula.pos.appinscricoes.controller.PessoaControllerV1.findById(PessoaControllerV1.java:39), java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104), java.base/java.lang.reflect.Method.invoke(Method.java:565), org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258), org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191), org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118), org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991), org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896), org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87), org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089), org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979), org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014), org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903), jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564), org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885), jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658), org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195), org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140), org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51), org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164), org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140), org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100), org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116), org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164), org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140), org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93), org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116), org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164), org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140), org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201), org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116), org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164), org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140), org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167), org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90), org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483), org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116), org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93), org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74), org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344), org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398), org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63), org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903), org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769), org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52), org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189), org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658), org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63), java.base/java.lang.Thread.run(Thread.java:1447)]
+2025-09-27 15:59:56 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.NoClassDefFoundError: com/aula/pos/appinscricoes/service/EventoService
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3006)
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2356)
+	at org.springframework.boot.BeanDefinitionLoader.hasNoConstructors(BeanDefinitionLoader.java:293)
+	at org.springframework.boot.BeanDefinitionLoader.isEligible(BeanDefinitionLoader.java:285)
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:160)
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:136)
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:129)
+	at org.springframework.boot.SpringApplication.load(SpringApplication.java:697)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.aula.pos.appinscricoes.AppinscricoesApplication.main(AppinscricoesApplication.java:22)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.ClassNotFoundException: com.aula.pos.appinscricoes.service.EventoService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+	... 17 common frames omitted
+2025-09-27 16:41:33 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.aula.pos.appinscricoes.service.UsuarioServiceImpl required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' in your configuration.
+
+2025-09-27 16:42:58 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.aula.pos.appinscricoes.service.UsuarioServiceImpl required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' in your configuration.
+
